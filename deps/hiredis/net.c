@@ -32,6 +32,15 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+#define _POSIX_C_SOURCE 200112L
+
+/* Cygwin Fix */
+#ifdef __CYGWIN__
+#define TCP_KEEPCNT 8
+#define TCP_KEEPINTVL 150
+#define TCP_KEEPIDLE 14400
+#endif
+
 #include "fmacros.h"
 #include <sys/types.h>
 #include <fcntl.h>

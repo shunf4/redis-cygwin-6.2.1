@@ -28,6 +28,9 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+/* Cygwin Fix */
+#define _GNU_SOURCE
+
 #include "server.h"
 #include "sha1.h"   /* SHA1 is used for DEBUG DIGEST */
 #include "crc64.h"
